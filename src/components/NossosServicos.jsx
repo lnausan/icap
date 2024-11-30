@@ -1,53 +1,71 @@
 import React from 'react';
 import { Box, Typography, Divider } from '@mui/material';
-import backgroundImage from '../assets/images/nossos-servicos-bg.jpg'; // Imagen de fondo
+import backgroundImage from '../assets/images/nossos-servicos-bg.jpg';
 
 const NossosServicos = () => {
   return (
     <Box
-      id="nossos-servicos" // Identificador único para esta sección
+      id="nossos-servicos"
       component="section"
       sx={{
         padding: { xs: '2rem 1rem', sm: '4rem 2rem' },
-        backgroundImage: `url(${backgroundImage})`, // Imagen de fondo
-        backgroundSize: 'cover', // Que cubra todo el contenedor
-        backgroundPosition: 'center', // Centrada
-        backgroundRepeat: 'no-repeat', // Sin repetir
-        width: '100%', // Ocupa todo el ancho
-        maxWidth: '100%', // Asegura que no se desborde
-        minHeight: '80vh', // Misma altura que SOBRE NÓS
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        maxWidth: '100%',
+        minHeight: '80vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center', // Centrar el contenido verticalmente
-        alignItems: 'center', // Centrar el contenido horizontalmente
+        justifyContent: 'center',
+        alignItems: 'center',
         textAlign: 'center',
-        color: '#ffffff', // Texto blanco
-        overflow: 'hidden', // Evita cualquier desbordamiento
-        gap: '4rem', // Más espacio entre los bloques
+        color: '#ffffff',
+        gap: '4rem', // Más espacio entre bloques
       }}
     >
       {/* Bloque 1: Descrição Geral dos Serviços */}
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, // Columnas en pantallas grandes, filas en pequeñas
-          alignItems: 'center', // Alineación vertical de los elementos
-          gap: '2rem',
-          width: '100%', // Asegura que ocupa todo el ancho
-          maxWidth: '1200px', // Ancho máximo para que no sea demasiado amplio
-          position: 'relative', // Necesario para la animación de la línea
-          '&:hover .line': {
-            width: '100%', // Línea crece al hacer hover
-          },
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          gap: { xs: '1rem', md: '4rem' }, // Más espacio entre columnas en escritorio
+          width: '100%',
+          maxWidth: '1200px',
+          textAlign: { xs: 'center', md: 'left' },
+          position: 'relative',
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
             fontWeight: 900,
             fontFamily: "'Poppins', sans-serif",
             flex: '1',
-            textAlign: 'left', // Título alineado a la izquierda
+            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
+            position: 'relative',
+            '&:hover::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '100%',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '0',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
           }}
         >
           Descrição Geral dos Serviços
@@ -57,34 +75,21 @@ const NossosServicos = () => {
           flexItem
           sx={{
             borderColor: '#ffffff',
-            height: '100%',
+            height: { xs: '1px', md: '100%' },
+            margin: { xs: '1rem 0', md: 0 },
           }}
         />
         <Typography
           sx={{
             flex: '2',
-            fontSize: '1rem',
-            lineHeight: '1.8', // Espaciado entre líneas
-            textAlign: 'right', // Contenido alineado a la derecha
+            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+            lineHeight: '1.6',
           }}
         >
           Consultorias em Psicologia da Saúde e Hospitalar. <br />
           Programas de suporte psicológico para profissionais e pacientes. <br />
           Desenvolvimento de estratégias em saúde mental.
         </Typography>
-        {/* Línea animada */}
-        <Box
-          className="line"
-          sx={{
-            position: 'absolute',
-            bottom: '-1px', // Justo debajo del título y el texto
-            left: 0,
-            width: '0%', // Comienza con 0% de ancho
-            height: '2px',
-            backgroundColor: '#ffffff',
-            transition: 'width 0.4s ease-in-out', // Animación suave
-          }}
-        />
       </Box>
 
       {/* Bloque 2: Áreas de Atuação */}
@@ -93,22 +98,41 @@ const NossosServicos = () => {
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
-          gap: '2rem',
+          gap: { xs: '1rem', md: '4rem' },
           width: '100%',
           maxWidth: '1200px',
-          position: 'relative', // Necesario para la animación de la línea
-          '&:hover .line': {
-            width: '100%',
-          },
+          textAlign: { xs: 'center', md: 'left' },
+          position: 'relative',
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
             fontWeight: 900,
             fontFamily: "'Poppins', sans-serif",
             flex: '1',
-            textAlign: 'left',
+            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
+            position: 'relative',
+            '&:hover::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '100%',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '0',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
           }}
         >
           Áreas de Atuação
@@ -118,34 +142,21 @@ const NossosServicos = () => {
           flexItem
           sx={{
             borderColor: '#ffffff',
-            height: '100%',
+            height: { xs: '1px', md: '100%' },
+            margin: { xs: '1rem 0', md: 0 },
           }}
         />
         <Typography
           sx={{
             flex: '2',
-            fontSize: '1rem',
-            lineHeight: '1.8',
-            textAlign: 'right',
+            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+            lineHeight: '1.6',
           }}
         >
           Psicologia hospitalar: atendimento em hospitais e clínicas. <br />
           Intervenções em saúde coletiva. <br />
           Consultorias em políticas públicas de saúde.
         </Typography>
-        {/* Línea animada */}
-        <Box
-          className="line"
-          sx={{
-            position: 'absolute',
-            bottom: '-1px',
-            left: 0,
-            width: '0%',
-            height: '2px',
-            backgroundColor: '#ffffff',
-            transition: 'width 0.4s ease-in-out',
-          }}
-        />
       </Box>
 
       {/* Bloque 3: Benefícios dos Serviços */}
@@ -154,22 +165,41 @@ const NossosServicos = () => {
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
-          gap: '2rem',
+          gap: { xs: '1rem', md: '4rem' },
           width: '100%',
           maxWidth: '1200px',
-          position: 'relative', // Necesario para la animación de la línea
-          '&:hover .line': {
-            width: '100%',
-          },
+          textAlign: { xs: 'center', md: 'left' },
+          position: 'relative',
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{
             fontWeight: 900,
             fontFamily: "'Poppins', sans-serif",
             flex: '1',
-            textAlign: 'left',
+            fontSize: { xs: '1rem', sm: '1.2rem', md: '1.5rem' },
+            position: 'relative',
+            '&:hover::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '100%',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
+            '&::after': {
+              content: '""',
+              position: 'absolute',
+              bottom: '-4px',
+              left: 0,
+              width: '0',
+              height: '2px',
+              backgroundColor: '#ffffff',
+              transition: 'width 0.3s ease-in-out',
+            },
           }}
         >
           Benefícios dos Serviços
@@ -179,34 +209,21 @@ const NossosServicos = () => {
           flexItem
           sx={{
             borderColor: '#ffffff',
-            height: '100%',
+            height: { xs: '1px', md: '100%' },
+            margin: { xs: '1rem 0', md: 0 },
           }}
         />
         <Typography
           sx={{
             flex: '2',
-            fontSize: '1rem',
-            lineHeight: '1.8',
-            textAlign: 'right',
+            fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+            lineHeight: '1.6',
           }}
         >
           Abordagem humanizada. <br />
           Suporte com profissionais especializados. <br />
           Soluções baseadas nas melhores práticas científicas e éticas.
         </Typography>
-        {/* Línea animada */}
-        <Box
-          className="line"
-          sx={{
-            position: 'absolute',
-            bottom: '-1px',
-            left: 0,
-            width: '0%',
-            height: '2px',
-            backgroundColor: '#ffffff',
-            transition: 'width 0.4s ease-in-out',
-          }}
-        />
       </Box>
     </Box>
   );

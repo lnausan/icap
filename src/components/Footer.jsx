@@ -4,19 +4,18 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PublicIcon from '@mui/icons-material/Public';
 import EmailIcon from '@mui/icons-material/Email';
-import logoAlt from '../assets/images/logo-alt.png'; // Ruta del logo alternativo
+import logoAlt from '../assets/images/logo-alt.png'; // Ruta del nuevo logo
 
 const Footer = () => {
   return (
     <Box
-      id="contato" // Identificador único para la sección
       component="footer"
       sx={{
         width: '100vw',
         maxWidth: '100%',
-        backgroundColor: '#d3d3d3', // Fondo gris claro
+        backgroundColor: '#e0e0e0',
         color: '#000000',
-        padding: '2rem 1rem',
+        padding: { xs: '1.5rem 1rem', md: '2rem 1rem' }, // Menos padding en móvil
         textAlign: 'center',
       }}
     >
@@ -26,16 +25,21 @@ const Footer = () => {
         src={logoAlt}
         alt="ICAP Logo Alternativo"
         sx={{
-          height: '100px',
+          height: { xs: '60px', md: '100px' }, // Tamaño reducido en móvil
           width: 'auto',
-          marginBottom: '1rem',
+          marginBottom: { xs: '1rem', md: '1.5rem' },
         }}
       />
 
-      {/* Información de contacto */}
-      <Grid container spacing={4} justifyContent="center" alignItems="center">
+      {/* Información */}
+      <Grid
+        container
+        spacing={{ xs: 2, md: 4 }} // Espaciado más pequeño en móvil
+        justifyContent="center"
+        alignItems="center"
+      >
         {/* WhatsApp */}
-        <Grid item xs={12} md={3} textAlign="center">
+        <Grid item xs={12} md={3}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Link
               href="https://wa.me/5551991599963"
@@ -46,11 +50,16 @@ const Footer = () => {
                 color: '#000000',
                 display: 'flex',
                 alignItems: 'center',
-                '&:hover': { color: '#25d366' }, // Hover de WhatsApp
+                '&:hover': { color: '#25d366' },
               }}
             >
-              <WhatsAppIcon sx={{ fontSize: '2rem', marginRight: '0.5rem' }} />
-              <Typography sx={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+              <WhatsAppIcon sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, marginRight: '0.5rem' }} />
+              <Typography
+                sx={{
+                  fontSize: { xs: '0.8rem', md: '1rem' }, // Texto más pequeño en móvil
+                  fontFamily: "'Poppins', sans-serif",
+                }}
+              >
                 +55 51 99159-9963
               </Typography>
             </Link>
@@ -58,7 +67,7 @@ const Footer = () => {
         </Grid>
 
         {/* Página Web */}
-        <Grid item xs={12} md={3} textAlign="center">
+        <Grid item xs={12} md={3}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Link
               href="https://psicoicap.com"
@@ -69,11 +78,16 @@ const Footer = () => {
                 color: '#000000',
                 display: 'flex',
                 alignItems: 'center',
-                '&:hover': { color: '#00acee' }, // Hover para la página web
+                '&:hover': { color: '#00acee' },
               }}
             >
-              <PublicIcon sx={{ fontSize: '2rem', marginRight: '0.5rem' }} />
-              <Typography sx={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+              <PublicIcon sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, marginRight: '0.5rem' }} />
+              <Typography
+                sx={{
+                  fontSize: { xs: '0.8rem', md: '1rem' },
+                  fontFamily: "'Poppins', sans-serif",
+                }}
+              >
                 psicoicap.com
               </Typography>
             </Link>
@@ -81,7 +95,7 @@ const Footer = () => {
         </Grid>
 
         {/* Correo Electrónico */}
-        <Grid item xs={12} md={3} textAlign="center">
+        <Grid item xs={12} md={3}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Link
               href="mailto:psicoicap@gmail.com"
@@ -92,11 +106,16 @@ const Footer = () => {
                 color: '#000000',
                 display: 'flex',
                 alignItems: 'center',
-                '&:hover': { color: '#ff5722' }, // Hover para el correo electrónico
+                '&:hover': { color: '#ff5722' },
               }}
             >
-              <EmailIcon sx={{ fontSize: '2rem', marginRight: '0.5rem' }} />
-              <Typography sx={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+              <EmailIcon sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, marginRight: '0.5rem' }} />
+              <Typography
+                sx={{
+                  fontSize: { xs: '0.8rem', md: '1rem' },
+                  fontFamily: "'Poppins', sans-serif",
+                }}
+              >
                 psicoicap@gmail.com
               </Typography>
             </Link>
@@ -104,7 +123,7 @@ const Footer = () => {
         </Grid>
 
         {/* Instagram */}
-        <Grid item xs={12} md={3} textAlign="center">
+        <Grid item xs={12} md={3}>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Link
               href="https://www.instagram.com/psicoicap?igsh=MnRoajFobWJhYzNw"
@@ -115,11 +134,16 @@ const Footer = () => {
                 color: '#000000',
                 display: 'flex',
                 alignItems: 'center',
-                '&:hover': { color: '#ff69b4' }, // Hover para Instagram
+                '&:hover': { color: '#ff69b4' },
               }}
             >
-              <InstagramIcon sx={{ fontSize: '2rem', marginRight: '0.5rem' }} />
-              <Typography sx={{ fontSize: '1rem', fontFamily: "'Poppins', sans-serif" }}>
+              <InstagramIcon sx={{ fontSize: { xs: '1.5rem', md: '2rem' }, marginRight: '0.5rem' }} />
+              <Typography
+                sx={{
+                  fontSize: { xs: '0.8rem', md: '1rem' },
+                  fontFamily: "'Poppins', sans-serif",
+                }}
+              >
                 Instagram
               </Typography>
             </Link>
@@ -131,8 +155,8 @@ const Footer = () => {
       <Typography
         variant="body2"
         sx={{
-          marginTop: '2rem',
-          fontSize: '0.9rem',
+          marginTop: { xs: '1.5rem', md: '2rem' },
+          fontSize: { xs: '0.7rem', md: '0.9rem' }, // Más pequeño en móvil
           fontFamily: "'Poppins', sans-serif",
           color: '#333333',
         }}

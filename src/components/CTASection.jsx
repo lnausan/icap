@@ -10,206 +10,281 @@ import backgroundImage from '../assets/images/about-us-bg.jpg';
 const CTASection = () => {
   return (
     <Box
+      id="cta-section"
       component="section"
       sx={{
-        width: '100vw', // Ocupa todo el ancho del navegador
-        maxWidth: '100%', // Asegura que no haya desbordamiento
-        minHeight: '100vh', // Altura mínima para cubrir la pantalla
-        margin: 0,
-        padding: '4rem 2rem', // Espaciado interno general
+        width: '100vw',
+        maxWidth: '100%',
+        minHeight: '100vh',
+        padding: { xs: '2rem 1rem', md: '4rem 2rem' },
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center', // Centra verticalmente
-        alignItems: 'center', // Centra horizontalmente
-        textAlign: 'center', // Texto centrado
+        justifyContent: 'center',
+        alignItems: 'center',
         color: '#ffffff',
+        textAlign: 'center',
+        gap: '3rem',
       }}
     >
-      <Box
+      {/* Título principal */}
+      <Typography
+        variant="h4"
         sx={{
-          maxWidth: '1200px', // Limita el ancho del contenido
-          width: '100%',
-          margin: '0 auto', // Centra horizontalmente el contenido
-          padding: '4rem 2rem', // Espaciado interno
+          fontWeight: 'bold',
+          fontFamily: "'Poppins', sans-serif",
+          fontSize: { xs: '1.8rem', sm: '2rem', md: '2.5rem' },
+          marginBottom: '2rem',
+          lineHeight: { xs: '2.2rem', md: '2.8rem' }, // Mejor ajuste de altura
         }}
       >
-        {/* Título principal */}
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: 'bold',
-            marginBottom: '3rem', // Espaciado debajo del título
-            fontFamily: "'Poppins', sans-serif",
-          }}
-        >
-          POR QUE INVESTIR EM SUA CARREIRA COM O ICAP?
-        </Typography>
+        POR QUE INVESTIR EM SUA CARREIRA COM O ICAP?
+      </Typography>
 
-        {/* Benefícios principais */}
-        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box>
-              <SchoolIcon sx={{ fontSize: '3rem', color: '#ffffff' }} />
-              <Typography
-                variant="h6"
-                sx={{
-                  marginTop: '1rem',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                Certificação Reconhecida
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                Diploma valorizado no mercado.
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box>
-              <TrendingUpIcon sx={{ fontSize: '3rem', color: '#ffffff' }} />
-              <Typography
-                variant="h6"
-                sx={{
-                  marginTop: '1rem',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                Educação de Qualidade
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                Conteúdo atualizado com as tendências mais recentes.
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box>
-              <GroupsIcon sx={{ fontSize: '3rem', color: '#ffffff' }} />
-              <Typography
-                variant="h6"
-                sx={{
-                  marginTop: '1rem',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                Rede de Contatos
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                Conexão com professores e colegas altamente qualificados.
-              </Typography>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <Box>
-              <StarIcon sx={{ fontSize: '3rem', color: '#ffffff' }} />
-              <Typography
-                variant="h6"
-                sx={{
-                  marginTop: '1rem',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                Crescimento Pessoal e Profissional
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                Ferramentas para se destacar no mercado.
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-        {/* Números de impacto */}
-        <Box sx={{ marginTop: '4rem' }}>
-          <Typography
-            variant="h5"
+      {/* Benefícios principais */}
+      <Grid
+        container
+        spacing={4}
+        sx={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        {/* Benefício 1 */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
             sx={{
-              fontWeight: 'bold',
-              marginBottom: '2rem',
-              fontFamily: "'Poppins', sans-serif",
+              textAlign: 'center',
+              maxWidth: '90%', // Asegura que no se desborde
+              margin: '0 auto', // Centra los elementos
+              gap: '0.5rem',
+              padding: { xs: '0 1rem', sm: '0' },
             }}
           >
-            Números de Impacto
-          </Typography>
-          <Grid container spacing={4}>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                variant="h4"
-                sx={{
-                  color: '#ffffff',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                <CountUp start={0} end={95} suffix="%" duration={3} useEasing={false} />
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                de aprovação dos alunos.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                variant="h4"
-                sx={{
-                  color: '#ffffff',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                Grandes Instituições
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                Parcerias com grandes instituições de saúde.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Typography
-                variant="h4"
-                sx={{
-                  color: '#ffffff',
-                  fontWeight: 'bold',
-                  fontFamily: "'Poppins', sans-serif",
-                }}
-              >
-                <CountUp start={0} end={1000} duration={3} useEasing={false} />+ Horas
-              </Typography>
-              <Typography sx={{ fontSize: '0.95rem', color: '#f0f0f0' }}>
-                de aprendizado para garantir uma formação completa.
-              </Typography>
-            </Grid>
-          </Grid>
-        </Box>
+            <SchoolIcon sx={{ fontSize: { xs: '2rem', md: '3rem' }, marginBottom: '1rem' }} />
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1rem', md: '1.2rem' },
+                lineHeight: '1.4',
+                marginBottom: '0.5rem',
+              }}
+            >
+              Certificação Reconhecida
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+                lineHeight: '1.6',
+              }}
+            >
+              Diploma valorizado no mercado.
+            </Typography>
+          </Box>
+        </Grid>
 
-        {/* Botón de llamada a la acción */}
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: '#000000',
-            color: '#ffffff',
-            padding: '1rem 3rem',
-            borderRadius: '25px',
-            fontWeight: 'bold',
-            textTransform: 'none',
-            fontFamily: "'Poppins', sans-serif",
-            marginTop: '6rem',
-            transition: 'background 0.3s ease',
-            '&:hover': {
-              backgroundColor: '#333333',
-            },
-          }}
-        >
-          GARANTA SUA VAGA HOJE
-        </Button>
+        {/* Benefício 2 */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              textAlign: 'center',
+              maxWidth: '90%',
+              margin: '0 auto',
+              gap: '0.5rem',
+              padding: { xs: '0 1rem', sm: '0' },
+            }}
+          >
+            <TrendingUpIcon sx={{ fontSize: { xs: '2rem', md: '3rem' }, marginBottom: '1rem' }} />
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1rem', md: '1.2rem' },
+                lineHeight: '1.4',
+                marginBottom: '0.5rem',
+              }}
+            >
+              Educação de Qualidade
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+                lineHeight: '1.6',
+              }}
+            >
+              Conteúdo atualizado com as tendências mais recentes.
+            </Typography>
+          </Box>
+        </Grid>
+
+        {/* Benefício 3 */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              textAlign: 'center',
+              maxWidth: '90%',
+              margin: '0 auto',
+              gap: '0.5rem',
+              padding: { xs: '0 1rem', sm: '0' },
+            }}
+          >
+            <GroupsIcon sx={{ fontSize: { xs: '2rem', md: '3rem' }, marginBottom: '1rem' }} />
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1rem', md: '1.2rem' },
+                lineHeight: '1.4',
+                marginBottom: '0.5rem',
+              }}
+            >
+              Rede de Contatos
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+                lineHeight: '1.6',
+              }}
+            >
+              Conexão com professores e colegas altamente qualificados.
+            </Typography>
+          </Box>
+        </Grid>
+
+        {/* Benefício 4 */}
+        <Grid item xs={12} sm={6} md={3}>
+          <Box
+            sx={{
+              textAlign: 'center',
+              maxWidth: '90%',
+              margin: '0 auto',
+              gap: '0.5rem',
+              padding: { xs: '0 1rem', sm: '0' },
+            }}
+          >
+            <StarIcon sx={{ fontSize: { xs: '2rem', md: '3rem' }, marginBottom: '1rem' }} />
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1rem', md: '1.2rem' },
+                lineHeight: '1.4',
+                marginBottom: '0.5rem',
+              }}
+            >
+              Crescimento Pessoal e Profissional
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+                lineHeight: '1.6',
+              }}
+            >
+              Ferramentas para se destacar no mercado.
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
+
+      {/* Números de impacto */}
+      <Box
+        sx={{
+          marginTop: '2rem',
+          textAlign: 'center',
+          gap: '1rem',
+          maxWidth: '90%',
+          margin: '0 auto',
+        }}
+      >
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={4}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1.5rem', md: '2rem' },
+              }}
+            >
+              <CountUp start={0} end={95} suffix="%" duration={6} useEasing />
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+              }}
+            >
+              de aprovação dos alunos.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1.5rem', md: '2rem' },
+              }}
+            >
+              Grandes Instituições
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+              }}
+            >
+              Parcerias com grandes instituições de saúde.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 'bold',
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: { xs: '1.5rem', md: '2rem' },
+              }}
+            >
+              <CountUp start={0} end={1000} duration={6} useEasing />+ Horas
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: '0.9rem', md: '1rem' },
+              }}
+            >
+              de aprendizado para garantir uma formação completa.
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
+
+      {/* Botón */}
+      <Button
+        variant="contained"
+        sx={{
+          marginTop: '2rem',
+          backgroundColor: '#000000',
+          color: '#ffffff',
+          padding: '1rem 2rem',
+          borderRadius: '25px',
+          fontWeight: 'bold',
+          fontFamily: "'Poppins', sans-serif",
+          '&:hover': {
+            backgroundColor: '#333333',
+          },
+        }}
+      >
+        GARANTA SUA VAGA HOJE
+      </Button>
     </Box>
   );
 };

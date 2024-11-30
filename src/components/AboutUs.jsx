@@ -1,27 +1,27 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import backgroundImage from '../assets/images/about-us-bg.jpg'; // Ruta correcta de la imagen
+import backgroundImage from '../assets/images/about-us-bg.jpg';
 
 const AboutUs = () => {
   return (
     <Box
-      id="about-us" // Identificador único para esta sección
+      id="about-us"
       component="section"
       sx={{
         padding: { xs: '2rem 1rem', sm: '4rem 2rem' },
-        backgroundImage: `url(${backgroundImage})`, // Imagen de fondo
-        backgroundSize: 'cover', // La imagen cubrirá todo el contenedor
-        backgroundPosition: 'center', // Centrada
-        backgroundRepeat: 'no-repeat', // Sin repetición
-        width: '100%', // Asegura que ocupe todo el ancho
-        maxWidth: '100%', // Evita cualquier desbordamiento
-        overflow: 'hidden', // Evita desbordes
-        margin: 0, // Sin márgenes externos
-        minHeight: '70vh', // Altura ajustada
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        maxWidth: '100%',
+        overflow: 'hidden',
+        margin: 0,
+        minHeight: '70vh',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center', // Centrar el contenido verticalmente
-        alignItems: 'center', // Centrar el contenido horizontalmente
+        justifyContent: 'center',
+        alignItems: 'center',
         textAlign: 'center',
       }}
     >
@@ -29,10 +29,12 @@ const AboutUs = () => {
       <Typography
         variant="h4"
         sx={{
-          fontWeight: 900, // Más grueso
+          fontWeight: 900,
           fontFamily: "'Poppins', sans-serif",
-          marginBottom: '9rem', // Separación adicional del título
-          color: '#ffffff', // Texto en blanco
+          marginBottom: { xs: '2rem', md: '4rem' }, // Más separación en escritorio
+          color: '#ffffff',
+          fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
+          marginTop: { xs: '0', md: '-2rem' }, // Elevar título en escritorio
         }}
       >
         SOBRE NÓS
@@ -42,38 +44,39 @@ const AboutUs = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, // Columnas en pantallas grandes, filas en pequeñas
-          justifyContent: 'space-around',
-          alignItems: 'flex-start',
-          gap: '3rem', // Más espacio entre columnas
-          width: '100%', // Asegura que ocupa todo el ancho
-          padding: '0 2rem', // Espaciado interno para las columnas
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: { xs: '2rem', md: '4rem' }, // Más espacio entre columnas en escritorio
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          maxWidth: '1200px',
         }}
       >
         {/* Columna 1: Missão */}
         <Box
           sx={{
-            maxWidth: '300px',
+            maxWidth: { xs: '90%', md: '300px' },
             textAlign: 'center',
           }}
         >
           <Typography
             variant="h5"
             sx={{
-              fontWeight: 900, // Más grueso
+              fontWeight: 900,
               fontFamily: "'Poppins', sans-serif",
               marginBottom: '1rem',
-              color: '#ffffff', // Texto en blanco
+              color: '#ffffff',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
             }}
           >
             Missão
           </Typography>
           <Typography
             sx={{
-              fontSize: '1rem',
-              color: '#ffffff', // Texto en blanco
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+              lineHeight: '1.6',
+              color: '#ffffff',
               fontFamily: "'Poppins', sans-serif",
-              lineHeight: '1.8', // Más espacio entre líneas
             }}
           >
             Oferecer serviços de alta qualidade em psicoterapia e capacitação,
@@ -84,27 +87,28 @@ const AboutUs = () => {
         {/* Columna 2: Visão */}
         <Box
           sx={{
-            maxWidth: '300px',
+            maxWidth: { xs: '90%', md: '300px' },
             textAlign: 'center',
           }}
         >
           <Typography
             variant="h5"
             sx={{
-              fontWeight: 900, // Más grueso
+              fontWeight: 900,
               fontFamily: "'Poppins', sans-serif",
               marginBottom: '1rem',
-              color: '#ffffff', // Texto en blanco
+              color: '#ffffff',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
             }}
           >
             Visão
           </Typography>
           <Typography
             sx={{
-              fontSize: '1rem',
-              color: '#ffffff', // Texto en blanco
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+              lineHeight: '1.6',
+              color: '#ffffff',
               fontFamily: "'Poppins', sans-serif",
-              lineHeight: '1.8', // Más espacio entre líneas
             }}
           >
             Ser referência em psicoterapia e capacitação, reconhecido pela
@@ -115,27 +119,28 @@ const AboutUs = () => {
         {/* Columna 3: Valores */}
         <Box
           sx={{
-            maxWidth: '300px',
+            maxWidth: { xs: '90%', md: '300px' },
             textAlign: 'center',
           }}
         >
           <Typography
             variant="h5"
             sx={{
-              fontWeight: 900, // Más grueso
+              fontWeight: 900,
               fontFamily: "'Poppins', sans-serif",
               marginBottom: '1rem',
-              color: '#ffffff', // Texto en blanco
+              color: '#ffffff',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
             }}
           >
             Valores
           </Typography>
           <Typography
             sx={{
-              fontSize: '1rem',
-              color: '#ffffff', // Texto en blanco
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+              lineHeight: '1.6',
+              color: '#ffffff',
               fontFamily: "'Poppins', sans-serif",
-              lineHeight: '1.8', // Más espacio entre líneas
             }}
           >
             Ética, profissionalismo, respeito, empatia, compromisso, inovação,

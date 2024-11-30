@@ -6,41 +6,41 @@ import professionalImage from '../assets/images/professional.jpg'; // Imagen del
 const Profissionais = () => {
   return (
     <Box
-      id="profissionais" // Identificador único para esta sección
+      id="profissionais"
       sx={{
         position: 'relative',
-        width: '100vw', // Ocupa todo el ancho del navegador
-        minHeight: '80vh', // Altura consistente
-        margin: 0, // Elimina márgenes externos
-        padding: '4rem', // Espaciado interno uniforme
+        width: '100vw',
+        minHeight: '80vh',
+        margin: 0,
+        padding: { xs: '2rem 1rem', md: '4rem' },
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover', // Cubre todo el espacio del contenedor
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         color: '#ffffff',
         display: 'flex',
-        flexDirection: { xs: 'column', md: 'row' }, // Columnas en pantallas grandes
-        alignItems: 'center', // Centrado vertical
-        gap: '2rem', // Espaciado entre columnas
+        flexDirection: { xs: 'column', md: 'row' },
+        alignItems: 'center',
+        gap: { xs: '2rem', md: '4rem' },
       }}
     >
-      {/* Contenedor principal con más desplazamiento hacia la derecha */}
+      {/* Contenedor principal */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
-          alignItems: 'center',
-          justifyContent: 'flex-start',
+          alignItems: { xs: 'center', md: 'flex-start' },
+          justifyContent: { xs: 'center', md: 'flex-start' },
           width: '100%',
-          marginLeft: { xs: '3rem', md: '8rem' }, // Más margen para mover contenido hacia la derecha
+          textAlign: { xs: 'center', md: 'left' },
         }}
       >
         {/* Columna izquierda: Texto */}
         <Box
           sx={{
             flex: 1,
-            textAlign: 'left',
-            maxWidth: '600px', // Limita el ancho del texto
+            maxWidth: { xs: '90%', md: '600px' }, // Limitar el ancho en móvil
+            margin: '0 auto', // Centrado horizontal en móvil
           }}
         >
           <Typography
@@ -49,7 +49,7 @@ const Profissionais = () => {
               fontWeight: 900,
               fontFamily: "'Poppins', sans-serif",
               marginBottom: '1rem',
-              fontSize: '1.8rem',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
               position: 'relative',
               '&:hover::after': {
                 content: '""',
@@ -77,14 +77,16 @@ const Profissionais = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: '1rem',
-              lineHeight: '1.8',
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+              lineHeight: '1.6',
               marginBottom: '2rem',
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            Formação Acadêmica: Especialização em Psicologia da Saúde, Psicologia Hospitalar, entre outras áreas. <br />
-            Experiência Profissional: Atuação em hospitais, clínicas e projetos de saúde pública. <br />
+            Formação Acadêmica: Especialização em Psicologia da Saúde, Psicologia Hospitalar, entre outras áreas.
+            <br />
+            Experiência Profissional: Atuação em hospitais, clínicas e projetos de saúde pública.
+            <br />
             Diferenciais: Certificações, publicações, e participações em eventos científicos.
           </Typography>
           <Typography
@@ -93,7 +95,7 @@ const Profissionais = () => {
               fontWeight: 900,
               fontFamily: "'Poppins', sans-serif",
               marginBottom: '1rem',
-              fontSize: '1.8rem',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem' },
               position: 'relative',
               '&:hover::after': {
                 content: '""',
@@ -121,12 +123,13 @@ const Profissionais = () => {
           </Typography>
           <Typography
             sx={{
-              fontSize: '1rem',
-              lineHeight: '1.8',
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.2rem' },
+              lineHeight: '1.6',
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            Experiência prática em saúde mental e hospitalar. <br />
+            Experiência prática em saúde mental e hospitalar.
+            <br />
             Compromisso com o desenvolvimento ético e científico.
           </Typography>
         </Box>
@@ -151,8 +154,8 @@ const Profissionais = () => {
               src={professionalImage}
               alt="Imagem do Profissional"
               sx={{
-                width: '300px',
-                height: '300px',
+                width: { xs: '200px', sm: '250px', md: '300px' },
+                height: { xs: '200px', sm: '250px', md: '300px' },
                 borderRadius: '8px',
                 boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
                 objectFit: 'cover',
@@ -168,7 +171,7 @@ const Profissionais = () => {
           <Typography
             sx={{
               fontFamily: "'Sacramento', cursive",
-              fontSize: '1.5rem',
+              fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.5rem' },
               marginTop: '1rem',
               color: '#ffffff',
             }}
