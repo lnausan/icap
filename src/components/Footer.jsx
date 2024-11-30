@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <Box
       component="footer"
+      id="footer" // Agregamos el ID aquí
       sx={{
         width: '100vw',
         maxWidth: '100%',

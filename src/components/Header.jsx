@@ -95,8 +95,8 @@ const Header = () => {
                   transition: 'width 0.3s ease-in-out',
                 },
                 '&:focus': {
-                  outline: 'none',
-                  boxShadow: 'none',
+                  outline: 'none', // Quita el contorno azul
+                  boxShadow: 'none', // Evita sombreado adicional
                 },
               }}
             >
@@ -128,7 +128,16 @@ const Header = () => {
         {/* Menú móvil */}
         <IconButton
           onClick={() => setDrawerOpen(true)}
-          sx={{ display: { xs: 'block', md: 'none' }, color: '#fff' }}
+          sx={{
+            display: { xs: 'block', md: 'none' },
+            color: '#fff',
+            outline: 'none',
+            boxShadow: 'none',
+            '&:focus': {
+              outline: 'none', // Evita el contorno azul
+              boxShadow: 'none',
+            },
+          }}
         >
           <MenuIcon />
         </IconButton>
@@ -164,6 +173,12 @@ const Header = () => {
                   fontWeight: 500,
                   color: '#fff',
                   '&:hover': { color: '#f0f0f0' },
+                  outline: 'none',
+                  boxShadow: 'none',
+                  '&:focus': {
+                    outline: 'none', // Quita el contorno azul
+                    boxShadow: 'none',
+                  },
                 }}
               >
                 {item.text}
@@ -189,6 +204,12 @@ const Header = () => {
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   color: '#000',
                 },
+                outline: 'none',
+                boxShadow: 'none',
+                '&:focus': {
+                  outline: 'none',
+                  boxShadow: 'none',
+                },
               }}
             >
               Cursos
@@ -201,4 +222,3 @@ const Header = () => {
 };
 
 export default Header;
-
